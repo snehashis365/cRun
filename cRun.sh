@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION='0.7.20.4'
+VERSION='0.8.3.0'
 #This script will compile the files specified and generator object files with same name as the C file and Execute them in the other named.
 #For e.g:- example.c will give example.out and execute example.out
 LGREEN='\033[1;32m'
@@ -51,7 +51,7 @@ else
     read yn
     case $yn in
       [Yy]*)
-        "$PACKAGE_INSTALL"
+        $PACKAGE_INSTALL
         COMPILER=$(cc --version | grep clang)
         if [ -z "$COMPILER" ]; then
           COMPILER=$(gcc --version | grep gcc)
@@ -74,11 +74,11 @@ fi
 function download() {
   echo -e "'git pull' recommended if repo is cloned on system\nCreating Directory"
   dVERSION=''
-  mkdir Downloaded_script
+  mkdir Downloaded_Script
   echo "Downloading..."
-  curl https://raw.githubusercontent.com/snehashis365/SimpleScripts/master/cRun.sh >Downloaded_script/cRun.sh
+  curl https://raw.githubusercontent.com/snehashis365/SimpleScripts/master/cRun.sh >Downloaded_Script/cRun.sh
   if [ "$?" == "0" ]; then
-    echo "File saved in $PWD/Downloaded_script/"
+    echo "File saved in $PWD/Downloaded_Script/"
   else
     echo "Failed to download"
   fi
