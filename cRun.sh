@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION='0.8.3.0'
+VERSION='0.8.14.0'
 #This script will compile the files specified and generator object files with same name as the C file and Execute them in the other named.
 #For e.g:- example.c will give example.out and execute example.out
 LGREEN='\033[1;32m'
@@ -299,7 +299,7 @@ function compile() {
 function run() {
   COMPILE_ERROR=false
   while (($#)); do
-    if [ -f "${1/.c*/.out}" -o "$COMPILE" = true ]; then
+    if [ ! -f "${1/.c*/.out}" -o "$COMPILE" = true ]; then
       compile "$1"
       if [ $? -ne 0 ]; then
         COMPILE_ERROR=true
