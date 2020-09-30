@@ -6,6 +6,9 @@
 
 cRun is a bash script that is meant to make compiling and running **.c** files easy for both beginners and experienced. It's designed mainly based on the use case of **students** new to C Programming
 
+**Note: This Version is now depriciated please check the python version [here](https://github.com/snehashis365/cRun-py)**
+*It has many new features like native support for windows with python3 and a compiler being the pre-requisite, Progressbar with compile error faults, verbose mode and an experimental curses mode that uses arrow key for navigation instead of Number based menu system.*
+
 ### Built by a rookie for the fellow rookies
 
 I wrote this script after finding some things annoying about C Programming and being a beginner I am immature enough to make something for this purpose
